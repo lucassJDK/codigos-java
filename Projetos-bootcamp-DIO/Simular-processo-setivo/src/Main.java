@@ -1,6 +1,15 @@
 public class Main {
     public static void main(String[] args) {
         Main.selectBySalary(3000);
+        String [][] candidates = {
+                {"Maria","1000"},
+                {"João","3000"},
+                {"Pedro","1200"},
+                {"José","2000"},
+                {"Ezequiel","9000"},
+                {"Felipe","1400"}
+        };
+
     }
 
     public static void selectBySalary(double salary) {
