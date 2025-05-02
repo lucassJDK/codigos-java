@@ -1,6 +1,5 @@
 public class Main {
     public static void main(String[] args) {
-        Main.selectBySalary(3000);
         String [][] candidates = {
                 {"Maria","1000"},
                 {"João","3000"},
@@ -11,11 +10,19 @@ public class Main {
                 {"Alberto","7000"},
                 {"ana","500"}
         };
+         Main.selectBySalary(candidates);
 
 
     }
 
-    public static void selectBySalary(double salary) {
+    public static void selectBySalary(String [][] candidates) {
+        double []  wages = new double[5];
+
+        for(String[] salary : candidates) {
+
+
+        }
+        /*
         if (salary < 2000) {
             System.out.println("LIGAR PARA O CANDIDATO");
         }
@@ -24,6 +31,8 @@ public class Main {
         } else {
             System.out.println("AGUARDAR COM OS DEMAIS");
         }
+
+         */
     }
 
 }
