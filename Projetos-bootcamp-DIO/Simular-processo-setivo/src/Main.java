@@ -8,7 +8,8 @@ public class Main {
                 {"José","2000"},
                 {"Ezequiel","9000"},
                 {"Felipe","1400"},
-                {"Alberto","7000"}
+                {"Alberto","7000"},
+                {"ana","500"}
         };
 
 
