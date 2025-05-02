@@ -4,12 +4,15 @@ public class Main {
     }
 
     public static void selectBySalary(double salary) {
-        if (salary < 2000)
+        if (salary < 2000) {
             System.out.println("LIGAR PARA O CANDIDATO");
-        else if (salary == 2000)
+        }
+        else if (salary == 2000) {
             System.out.println("LIGAR PARA O CANDIDATO E PEDIR CONTRA OFERTA");
-        else
+        }
+        else {
             System.out.println("AGUARDAR COM OS DEMAIS");
+        }
     }
 
 }
