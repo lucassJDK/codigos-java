@@ -9,8 +9,7 @@ public class Main {
         }
         else if (salary == 2000) {
             System.out.println("LIGAR PARA O CANDIDATO E PEDIR CONTRA OFERTA");
-        }
-        else {
+        } else {
             System.out.println("AGUARDAR COM OS DEMAIS");
         }
     }
