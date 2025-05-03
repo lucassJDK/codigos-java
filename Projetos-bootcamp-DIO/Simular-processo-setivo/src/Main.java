@@ -16,21 +16,24 @@ public class Main {
     }
 
     public static void selectBySalary(String [][] candidates) {
-        double []  wages = new double[5];
+        double []  wages = new double[candidates.length];
         int cout = 0;
         int positionCout = 0;
 
         for(String[] salary : candidates) {
             for(String values : salary) {
                 if(cout % 2 != 0) {
+                    if(positionCout == 5) {
+                        break;
+                    }
                     wages[positionCout] = Double.parseDouble(values);
                     positionCout++;
                 }
                 cout++;
             }
-
-
-
+        }
+        for(double salary : wages) {
+            System.out.println(salary);
         }
         /*
         if (salary < 2000) {
