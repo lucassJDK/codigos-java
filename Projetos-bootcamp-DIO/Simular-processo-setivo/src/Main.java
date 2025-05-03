@@ -17,8 +17,18 @@ public class Main {
 
     public static void selectBySalary(String [][] candidates) {
         double []  wages = new double[5];
+        int cout = 0;
+        int positionCout = 0;
 
         for(String[] salary : candidates) {
+            for(String values : salary) {
+                if(cout % 2 != 0) {
+                    wages[positionCout] = Double.parseDouble(values);
+                    positionCout++;
+                }
+                cout++;
+            }
+
 
 
         }
