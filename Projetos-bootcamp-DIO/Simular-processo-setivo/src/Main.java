@@ -22,16 +22,12 @@ public class Main {
 
         for(String[] salary : candidates) {
             for(String values : salary) {
-                if(cout % 2 != 0) {
-                    if(positionCout == 5) {
-                        break;
-                    }
                     wages[positionCout] = Double.parseDouble(values);
                     positionCout++;
                 }
                 cout++;
             }
-        }
+
         for(double salary : wages) {
             System.out.println(salary);
         }
