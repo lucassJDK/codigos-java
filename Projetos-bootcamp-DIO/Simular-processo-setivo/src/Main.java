@@ -50,34 +50,39 @@ public class Main {
     }
     public static void selectBySalary(String [][] allCandidates,double[] wages) {
         String [] candidates = new String[5]; //Só pode passar no máximo 5 candidatos no processo seletivo
-        int cout = 0;
+        int positionCount = 0;
+        int counterTimes = 0;
 
         for(Double salary : wages) {
-            if(cout == 5) break;
+            if(positionCount == 5) break;
+            counterTimes++;
 
             if(salary < 2000) {
-                candidates[cout] = allCandidates[cout][0];
-                cout++;
+                candidates[positionCount] = allCandidates[counterTimes - 1][0];
+                positionCount++;
             }
+
         }
 
-        if(cout < 5) { //Mesma lógica que o outro for,entretanto a prioridade de vagas é quem tem o salário < e apenas depois buscamos os iguais
+        if(positionCount < 5) { //Mesma lógica que o outro for,entretanto a prioridade de vagas é quem tem o salário < e apenas depois buscamos os iguais
+             counterTimes = 0;
               for(Double salary : wages) {
-                  if (cout == 5) break;
+                  if (positionCount == 5) break;
+                  counterTimes++;
 
                   if (salary == 2000) {
-                      candidates[cout] = allCandidates[cout][0];
-                      cout++;
+                      candidates[positionCount] = allCandidates[counterTimes - 1][0];
+                      positionCount++;
                   }
               }
               }
         String message = "";
-        for (int i = 0; i < cout; i++) {
-            if(i == cout - 1) {
+        for (int i = 0; i < positionCount; i++) {
+            if(i == positionCount - 1) {
                 message += candidates[i].concat(".");
             }
-            else if (i == cout - 2) {
-                message += candidates[i].concat("e ");
+            else if (i == positionCount - 2) {
+                message += candidates[i].concat(" e ");
             } else {
                 message += candidates[i].concat(",");
             }
