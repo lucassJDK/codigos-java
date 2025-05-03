@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
         String [][] candidates = {
@@ -72,7 +74,24 @@ public class Main {
                 message += candidates[i].concat(",");
             }
         }
-        System.out.printf("Os candidatos selecionados foram: %s",message);
+        System.out.printf("Os candidatos selecionados foram: %s \n",message);
+        callForCandidates(candidates);
+        }
+
+        public static void callForCandidates(String [] candidates) {
+        for(String candidate : candidates) {
+            for (int i = 0; i < 3; i++) {
+                Random random = new Random();
+                int tryConnect = random.nextInt(2);
+
+                if(tryConnect == 1) {
+                    System.out.printf("O candidato %s aceitou a proposta com %d ligações(máximo 3) \n",candidate,i + 1);
+                    break;
+                }
+                if(i == 2) { System.out.printf("o candidato %s não atendeu as 3 ligações! \n",candidate); }
+            }
+        }
+
         }
 
         }
