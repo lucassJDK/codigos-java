@@ -31,21 +31,6 @@ public class Main {
                 }
 
             }
-
-        for(double salary : wages) {
-            System.out.println(salary);
-        }
-        /*
-        if (salary < 2000) {
-            System.out.println("LIGAR PARA O CANDIDATO");
-        }
-        else if (salary == 2000) {
-            System.out.println("LIGAR PARA O CANDIDATO E PEDIR CONTRA OFERTA");
-        } else {
-            System.out.println("AGUARDAR COM OS DEMAIS");
-        }
-.
-         */
         Main.selectBySalary(candidates,wages);
     }
     public static void selectBySalary(String [][] allCandidates,double[] wages) {
