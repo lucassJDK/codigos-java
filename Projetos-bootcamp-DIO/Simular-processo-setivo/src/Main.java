@@ -65,16 +65,22 @@ public class Main {
               for(Double salary : wages) {
                   if (cout == 5) break;
 
-                  if (salary == 2000) candidates[cout] = allCandidates[cout][0];
-                  cout++;
+                  if (salary == 2000) {
+                      candidates[cout] = allCandidates[cout][0];
+                      cout++;
+                  }
               }
               }
-        String message = "s";
+        String message = "";
         for (int i = 0; i < cout; i++) {
-            if(i == candidates.length) {
+            if(i == cout - 1) {
                 message += candidates[i].concat(".");
             }
-            message += candidates[i].concat(",");
+            else if (i == cout - 2) {
+                message += candidates[i].concat("e ");
+            } else {
+                message += candidates[i].concat(",");
+            }
         }
         System.out.printf("Os candidatos selecionados foram: %s",message);
         }
