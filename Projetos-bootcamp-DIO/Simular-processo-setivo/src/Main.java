@@ -13,6 +13,7 @@ public class Main {
          Main.getWages(candidates);
 
 
+
     }
 
     public static void getWages(String [][] candidates) {
@@ -45,6 +46,7 @@ public class Main {
         }
 .
          */
+        Main.selectBySalary(candidates,wages);
     }
     public static void selectBySalary(String [][] allCandidates,double[] wages) {
         String [] candidates = new String[5]; //Só pode passar no máximo 5 candidatos no processo seletivo
@@ -53,8 +55,10 @@ public class Main {
         for(Double salary : wages) {
             if(cout == 5) break;
 
-            if(salary < 2000) candidates[cout] = allCandidates[cout][0];
-            cout++;
+            if(salary < 2000) {
+                candidates[cout] = allCandidates[cout][0];
+                cout++;
+            }
         }
 
         if(cout < 5) { //Mesma lógica que o outro for,entretanto a prioridade de vagas é quem tem o salário < e apenas depois buscamos os iguais
@@ -65,8 +69,8 @@ public class Main {
                   cout++;
               }
               }
-        String message = "";
-        for (int i = 0; i < candidates.length; i++) {
+        String message = "s";
+        for (int i = 0; i < cout; i++) {
             if(i == candidates.length) {
                 message += candidates[i].concat(".");
             }
