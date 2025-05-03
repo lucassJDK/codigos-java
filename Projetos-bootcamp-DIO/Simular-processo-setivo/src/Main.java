@@ -10,22 +10,25 @@ public class Main {
                 {"Alberto","7000"},
                 {"ana","500"}
         };
-         Main.selectBySalary(candidates);
+         Main.getWages(candidates);
 
 
     }
 
-    public static void selectBySalary(String [][] candidates) {
+    public static void getWages(String [][] candidates) {
         double []  wages = new double[candidates.length];
         int cout = 0;
         int positionCout = 0;
 
         for(String[] salary : candidates) {
             for(String values : salary) {
+                if(cout % 2 != 0) {
                     wages[positionCout] = Double.parseDouble(values);
                     positionCout++;
                 }
                 cout++;
+                }
+
             }
 
         for(double salary : wages) {
@@ -43,6 +46,11 @@ public class Main {
 .
          */
     }
+    public static void selectBySalary(double[] wages) {
+        String [] candidates = new String[5]; //Só pode passar no máximo 5 candidatos no processo seletivo
 
-}
+        }
+    }
+
+
 
