@@ -4,7 +4,7 @@ public class Fibonnaci {
         terms[0] = 1;
         terms[1] = 1;
 
-        for(int i = 1; i <= nTerm; i++) {
+        for(int i = 1; i < nTerm - 1; i++) {
             terms[i + 1] = terms[i] + terms[i - 1];
         }
 
