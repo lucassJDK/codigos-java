@@ -3,6 +3,7 @@ public class Vetor {
         int cout = 0;
         for(int number : numbers) {
             System.out.printf("na posição %d tem o valor %d \n",cout,number);
+            cout++;
         }
     }
 }
