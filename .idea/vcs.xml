@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/java iniciante/estrutura condicionais + repetição/exercicios java iniciante/exercicios java iniciante(Copy)" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/java orientado a objetos/determinante" vcs="Git" />
   </component>
 </project>
