@@ -9,7 +9,11 @@ public class Fibonnaci {
         }
 
         for(long number : terms) {
-            if(number == terms[nTerm - 1]) {
+            if (number == terms[nTerm - 1]) {
+                if(nTerm == 2) {
+                    System.out.println("1,1");
+                    return;
+                }
                 System.out.print(number);
                 return;
             }
