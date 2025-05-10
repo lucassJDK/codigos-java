@@ -5,6 +5,7 @@ public class Main {
         System.out.println("Insira até que termo da sequêcia você quer imprimir:");
         Scanner scan = new Scanner(System.in);
         int nTerm = scan.nextInt();
+
         try {
             Fibonnaci.generateSequenceInRange(nTerm);
         } catch(ArrayIndexOutOfBoundsException e) {
