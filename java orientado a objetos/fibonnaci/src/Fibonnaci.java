@@ -1,5 +1,19 @@
 public class Fibonnaci {
-    public static void generateSequenceInRange(long nTerm) {
+    public static void generateSequenceInRange(int nTerm) {
+        long [] terms = new long[nTerm];
+        terms[0] = 1;
+        terms[1] = 1;
 
+        for(int i = 1; i <= nTerm; i++) {
+            terms[i + 1] = terms[i] + terms[i - 1];
+        }
+
+        for(long number : terms) {
+            if(number == terms[nTerm - 1]) {
+                System.out.print(number);
+                return;
+            }
+            System.out.print(number + ",");
+        }
     }
 }
